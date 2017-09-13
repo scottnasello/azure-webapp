@@ -1,12 +1,47 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <!-- frameset is deprecated in html5, but it still works. -->
-    <frameset framespacing="0" rows="150,*" frameborder="0" noresize>
-        <frame name="top" src="http://www.npscripts.com/framer/demo-top.html" target="top">
-        <frame name="main" src="http://www.google.com" target="main">
-        <a href="http://rtd.columbia.csc/docs/odp-vsts/en/latest/">ODP RTD</a>
-        <a href="http://rtd.columbia.csc/docs/start-here/en/latest/">Start Here</a>
-    </frameset>
-</html>    
+<head>
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="http://rtd.columbia.csc/docs/odp-vsts/en/latest/">ODP RTD</a>
+  <a href="http://rtd.columbia.csc/docs/start-here/en/latest/">Start Here</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Some content..</p>
+</div>
+
+</body>
+</html>
