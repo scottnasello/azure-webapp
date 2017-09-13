@@ -1,47 +1,134 @@
 ﻿<!DOCTYPE html>
+<!-- Template by html.am -->
 <html>
-<head>
-<style>
-body {margin:0;}
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Rows Frames Layout (header frame)</title>
+		<style type="text/css">
+		
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		#header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px; 
+			overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
+			background: #BCCE98;
+		}
+		
+		#logo {
+			padding:10px;
+			float:left;
+		}
+		
+		main {
+			position: fixed;
+			top: 100px; /* Set this to the height of the header */
+			left: 0; 
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background: #fff;
+		}
+		
+		.innertube {
+			margin: 15px; /* Provides padding for the content */
+		}
+		
+		p {
+			color: #555;
+		}
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+		/* Menu */
+		nav { 
+			margin:0 auto; 
+			padding:0; 
+			float:right;
+		}
+		nav ul { 
+			list-style:none; 
+			padding:0; 
+			float:left;
+		}
+		nav ul li { 
+			margin:0; 
+			padding:0 0 0 8px; 
+			float:left;
+		}
+		nav ul li a { 
+			display:block; 
+			margin:0; 
+			padding:8px 20px; 
+			color:darkgreen; 
+			text-decoration:none;
+		}
+		nav ul li.active a, #top-nav ul li a:hover { 
+			color:#d3d3f9;
+		}
+				
+		/*IE6 fix*/
+		* html body{
+			padding: 100px 0 0 0; /* Set the first value to the height of the header */
+		}
+		
+		* html main{ 
+			height: 100%; 
+			width: 100%; 
+		}
+		
+		</style>
+		
+		<script type="text/javascript">
+			/* =============================
+			This script generates sample text for the body content. 
+			You can remove this script and any reference to it. 
+			 ============================= */
+			var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+			function generateText(sentenceCount){
+				for (var i=0; i<sentenceCount; i++)
+				document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+			}
+		</script>	
+	
+	</head>
+	
+	<body>		
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
-</head>
-<body>
-
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="http://rtd.columbia.csc/docs/odp-vsts/en/latest/">ODP RTD</a>
-  <a href="http://rtd.columbia.csc/docs/start-here/en/latest/">Start Here</a>
-</div>
-
-<div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Some content..</p>
-</div>
-
-</body>
+		<header id="header">
+			<div id="logo">
+				<h1>CoolLogo</h1>
+			</div>
+			<nav>
+				<div class="innertube">
+				<ul>
+					<li><a href="http://rtd.columbia.csc/docs/odp-vsts/en/latest/">ODP</a></li>
+					<li><a href="http://rtd.columbia.csc/docs/start-here/en/latest/">Start Here</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+					<li><a href="#">Link 5</a></li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+				
+		<main>
+			<div class="innertube">
+				
+				<h1>Heading</h1>
+				<p><script>generateText(300)</script></p>
+				
+			</div>
+		</main>
+	
+	</body>
 </html>
