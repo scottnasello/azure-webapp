@@ -2,6 +2,11 @@ $gitrepo="https://github.com/scottnasello/azure-webapp.git"
 $webappname="rtd-webapp"
 $location="West US"
 
+#https://docs.microsoft.com/en-us/azure/app-service-web/scripts/app-service-powershell-continuous-deployment-github
+
+# Remove resource group
+Remove-AzureRmResourceGroup -Name $webappname -Force
+
 # Create a resource group.
 New-AzureRmResourceGroup -Name $webappname -Location $location
 
